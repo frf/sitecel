@@ -35,3 +35,16 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$(function($) {
+  $('.instagram').on('willLoadInstagram', function(event, options) {
+    console.log(options);
+  });
+  $('.instagram').on('didLoadInstagram', function(event, response) {
+    console.log(response);
+  });
+  $('.instagram').instagram({
+    hash: 'love',
+    clientId: '1558450d82b244aea85d661640c02355'
+  });
+});
